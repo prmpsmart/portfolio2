@@ -14,7 +14,28 @@
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="./css/styles.css">
 
-    <title>Miracle</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script type="text/javascript">
+        function sendEmail ()
+        {
+            Email.send( {
+                Host: "smtp.gmail.com",
+                Username: "rockymiracy@gmail.com",
+                Password: "Enter your password",
+                To: 'prmpsmart@gmail.com',
+                From: "rockymiracy@gmail.com",
+                Subject: document.getElementsByName( "subject" ).value,
+                Body: document.getElementsByName( "name" ).value + ' | ' + document.getElementsByName( "email" ).value + ' \n\n ' + document.getElementsByName( "description" ).value,
+            } )
+                .then( function( message )
+                {
+                    alert( "Mail sent successfully" )
+                } );
+        }
+    </script>
+
+    <title>Apata Miracle Peter's Portfolio</title>
 </head>
 
 <body>
@@ -79,11 +100,17 @@
                         <a href="https://www.linkedin.com/in/prmpsmart/" target="_blank" class="home__social-icon">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
-                        <a href="https://twitter.com/prmpsmart" target="_blank" class="home__social-icon">
+                        <a href="https://www.twitter.com/prmpsmart" target="_blank" class="home__social-icon">
                             <i class="uil uil-twitter-alt"></i>
                         </a>
                         <a href="https://www.github.com/prmpsmart" target="_blank" class="home__social-icon">
                             <i class="uil uil-github-alt"></i>
+                        </a>
+                        <a href="https://www.facebook.com/PrmpSmart" target="_blank" class="home__social-icon">
+                            <i class="uil uil-facebook-alt"></i>
+                        </a>
+                        <a href="https://www.instagram.com/PrmpSmart" target="_blank" class="home__social-icon">
+                            <i class="uil uil-instagram-alt"></i>
                         </a>
                     </div>
 
@@ -108,7 +135,7 @@
 
                     <div class="home__data">
                         <h1 class="home__title">Hello ! <br> I'm Miracle Apata </h1>
-                        <h3 class="home__subtitle"><b>Flutter Developer</b></h3>
+                        <h3 class="home__subtitle"><b>Software Developer</b></h3>
                         <p class="home__description">Highly skilled and versatile Developer with expertise in multiple
                             programming languages and frameworks.</p>
                         <a href="#contact" class="button button--flex home__button">
@@ -876,20 +903,16 @@
                     <!--==================== PORTFOLIO 1 ====================-->
 
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="./images/portfolio1.jpg" alt="" class="portfolio__img">
+                        <img src="./images/peachy1.jpg" alt="" class="portfolio__img">
 
                         <div class="portfolio_">
-                            <h3 class="portfolio__title">Modern Dashboard</h3>
-                            <p class="portfolio__description">Data analitical dashboard adaptable to all devices,
-                                with ui components and animated interactions.</p>
-                            <a href="https://github.com/Venkateeshh/Weather-App"
+                            <h3 class="portfolio__title">Peachy</h3>
+                            <p class="portfolio__description">A mobile social media app for text and image messaging.
+                                Its the client app for the <a href="https://github.com/prmpsmart/PRMP_Chat"
+                                    class="button--link">PRMP_Chat</a></p>
+                            <a href="https://github.com/prmpsmart/peachy"
                                 class="button button--flex button--small portfolio__button">
                                 GitHub Repository
-                                <i class="uil uil-external-link-alt button__icon"></i>
-                            </a>
-                            <a href="https://venkateeshh.github.io/Weather-App/"
-                                class="button button--flex button--small portfolio__button">
-                                See Live
                                 <i class="uil uil-external-link-alt button__icon"></i>
                             </a>
                         </div>
@@ -898,31 +921,78 @@
                     <!--==================== PORTFOLIO 2 ====================-->
 
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="./images/portfolio1.PNG" alt="" class="portfolio__img">
+                        <img src="./images/prmp_chat.png" alt="" class="portfolio__img">
 
                         <div class="portfolio_">
-                            <h3 class="portfolio__title">E-Commerce website</h3>
-                            <p class="portfolio__description">Above Amazon clone is adaptable to all devices, with
-                                ui components and animated interactions.</p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
+                            <h3 class="portfolio__title">PRMP_Chat</h3>
+                            <p class="portfolio__description">A desktop social media app for text and image messaging.
+                                Built with Python and Qt (PySide6).</p>
+                            <a href="https://github.com/prmpsmart/PRMP_Chat"
+                                class="button button--flex button--small portfolio__button">
+                                GitHub Repository
+                                <i class="uil uil-external-link-alt button__icon"></i>
                             </a>
                         </div>
                     </div>
 
                     <!--==================== PORTFOLIO 3 ====================-->
 
+                    <div class="portfolio__content swiper-slide">
+                        <div class="portfolio_">
+                            <h3 class="portfolio__title">Cryptic Chat</h3>
+                            <p class="portfolio__description">An encrypted social messaging desktop app for text and
+                                image transfer.</p>
+                            <a href="https://github.com/prmpsmart/cryptic"
+                                class="button button--flex button--small portfolio__button">
+                                GitHub Repository
+                                <i class="uil uil-external-link-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--==================== PORTFOLIO 4 ====================-->
+
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="./images/portfolio2.png" alt="" class="portfolio__img">
+                        <img src="./images/bulk_file_renamer.png" alt="" class="portfolio__img">
 
                         <div class="portfolio_">
-                            <h3 class="portfolio__title">Brand Design</h3>
-                            <p class="portfolio__description">Tesla Clone is adaptable to all devices, with
-                                ui components and animated interactions.</p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
+                            <h3 class="portfolio__title">Bulk File Renamer</h3>
+                            <p class="portfolio__description">An app that renames a whole lot of selected files base on
+                                regex pattern (not necessary) and other options. Available for both mobile and desktop
+                                environments.</p>
+                            <a href="https://github.com/prmpsmart/bulk_file_renamer"
+                                class="button button--flex button--small portfolio__button">
+                                GitHub Repository
+                                <i class="uil uil-external-link-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--==================== PORTFOLIO 5 ====================-->
+
+                    <div class="portfolio__content swiper-slide">
+                        <div class="portfolio_">
+                            <h3 class="portfolio__title">Subtitle Offset</h3>
+                            <p class="portfolio__description">An app that adds seconds offset to a subtitle file (.srt,
+                                .txt files). Available for both mobile and desktop environments.</p>
+                            <a href="https://github.com/prmpsmart/Subtitle_Offset"
+                                class="button button--flex button--small portfolio__button">
+                                GitHub Repository
+                                <i class="uil uil-external-link-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--==================== PORTFOLIO 6 ====================-->
+
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="./images/all_3d_plots.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio_">
+                            <h3 class="portfolio__title">MineVis</h3>
+                            <p class="portfolio__description">A final year Mining Surveying 3D visualization project.
+                            </p>
+                            <a href="https://github.com/prmpsmart/MineVis"
+                                class="button button--flex button--small portfolio__button">
+                                GitHub Repository
+                                <i class="uil uil-external-link-alt button__icon"></i>
                             </a>
                         </div>
                     </div>
@@ -948,11 +1018,11 @@
         <!--==================== PROJECT IN MIND ====================-->
         <section class="project section">
 
-            <div class="project__bg">
-                <div class="project__container container grid">
+            <div class="project__bg" style="padding-top: 10px;padding-bottom: 10px;">
+                <div class="project__container container ">
                     <div class="project__data">
                         <h2 class="project__title">You have a new project?</h2>
-                        <p class="project__description">Contact me now and get discounts on your Web development
+                        <p class="project__description">Contact me now and get discounts on your software development
                             projects.</p>
                         <a href="#contact" class="button button--flex button--white">Contact me
                             <i class="uil uil-message project__icon button__icon"></i>
@@ -965,7 +1035,7 @@
 
         </section>
 
-        <!--==================== TESTIMONIAL ====================-->
+        <!--==================== TESTIMONIAL ====================--
         <section class="testimonial section">
 
             <h2 class="section__title">Testimonials</h2>
@@ -973,7 +1043,7 @@
 
             <div class="testimonial__container container swiper-container">
                 <div class="swiper-wrapper">
-                    <!--==================== TESTIMONIAL 1 ====================-->
+                    ==================== TESTIMONIAL 1 ====================
                     <div class="testimonial__content swiper-slide">
                         <div class="testimonial__data">
                             <div class="testimonial__header">
@@ -997,7 +1067,7 @@
                             possible quality and attention and support 24 hours a day.
                         </p>
                     </div>
-                    <!--==================== TESTIMONIAL 2 ====================-->
+                    ==================== TESTIMONIAL 2 ====================
                     <div class="testimonial__content swiper-slide">
                         <div class="testimonial__data">
                             <div class="testimonial__header">
@@ -1021,7 +1091,7 @@
                             possible quality and attention and support 24 hours a day.
                         </p>
                     </div>
-                    <!--==================== TESTIMONIAL 3 ====================-->
+                    ==================== TESTIMONIAL 3 ====================
                     <div class="testimonial__content swiper-slide">
                         <div class="testimonial__data">
                             <div class="testimonial__header">
@@ -1046,10 +1116,10 @@
                     </div>
                 </div>
 
-                <!--Add pagination-->
+                Add pagination
                 <div class="swiper-pagination swiper-pagination-testimonial"></div>
             </div>
-        </section>
+        </section> -->
 
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
@@ -1063,7 +1133,7 @@
 
                         <div>
                             <h3 class="contact__title">Call me</h3>
-                            <span class="contatc__subtitle">(+94) 755422421</span>
+                            <span class="contatc__subtitle">(+234) 8168524477</span>
                         </div>
                     </div>
 
@@ -1072,7 +1142,7 @@
 
                         <div>
                             <h3 class="contact__title">E-mail</h3>
-                            <span class="contatc__subtitle">Miracle01@gmail.com</span>
+                            <span class="contatc__subtitle">prmpsmart@gmail.com</span>
                         </div>
                     </div>
 
@@ -1081,41 +1151,41 @@
 
                         <div>
                             <h3 class="contact__title">Location</h3>
-                            <span class="contatc__subtitle">Kandy, Sri Lanka</span>
+                            <span class="contatc__subtitle">Akure, Ondo State, Nigeria</span>
                         </div>
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
+                <form class="contact__form grid" id="contact_form">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
+                            <input type="text" class="contact__input" name="name" required>
                         </div>
 
                         <div class="contact__content">
                             <label for="" class="contact__label">E-mail</label>
-                            <input type="email" class="contact__input">
+                            <input type="email" class="contact__input" name="email" required>
                         </div>
                     </div>
 
                     <div class="contact__content">
                         <label for="" class="contact__label">Subject</label>
-                        <input type="text" class="contact__input">
+                        <input type="text" class="contact__input" name="subject" required>
                     </div>
 
                     <div class="contact__content">
                         <label for="" class="contact__label">Description</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <textarea name="description" id="" cols="0" rows="7" class="contact__input" required></textarea>
                     </div>
 
-                    <div>
-                        <a href="#" class="button button--flex">
-                            Send message
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-                </form>
+
+                    <a class="button button--flex" href="mailto:prmpsmart@gmail.com">
+                        Send message
+                        <i class="uil uil-message button__icon"></i>
+                    </a>
+            </div>
+            </form>
             </div>
 
         </section>
@@ -1128,7 +1198,7 @@
             <div class="footer__container container grid">
                 <div>
                     <h1 class="footer__title">Apata Miracle Peter</h1>
-                    <span class="footer__subtitle">Data Analyst</span>
+                    <span class="footer__subtitle">Software Developer</span>
                 </div>
 
                 <ul class="footer__links">
@@ -1144,18 +1214,24 @@
                 </ul>
 
                 <div class="footer__socials">
-                    <a href=https://www.facebook.com/Miracle.drashan" target="_blank" class="footer__social">
+                    <a href=https://www.facebook.com/PrmpSmart" target="_blank" class="footer__social">
                         <i class="uil uil-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/Miracle01/" target="_blank" class="footer__social">
+                    <a href="https://www.instagram.com/prmpsmart/" target="_blank" class="footer__social">
                         <i class="uil uil-instagram"></i>
                     </a>
-                    <a href="https://twitter.com/Miracle01" target="_blank" class="footer__social">
+                    <a href="https://www.twitter.com/prmpsmart" target="_blank" class="footer__social">
                         <i class="uil uil-twitter-alt"></i>
+                    </a>
+                    <a href="https://www.github.com/prmpsmart" target="_blank" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/prmpsmart" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
                     </a>
                 </div>
             </div>
-            <p class="footer__copy">&#169; Ratheshan03. All rights reserved.</p>
+            <p class="footer__copy" style="color: white;">&#169; Mimi Peach. All rights reserved.</p>
         </div>
     </footer>
 
