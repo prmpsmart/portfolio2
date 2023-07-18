@@ -1,0 +1,1 @@
+git clone -b mimi_peach https://github.com/kaizen-technologies-code/Commfluenz.git
