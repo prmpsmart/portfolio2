@@ -7,6 +7,7 @@
 6. [justremote](https://justremote.co) ✓
 7. [Indeed](https://indeed.com) ✓
 8. [glassdoor](https://glassdoor.com) ✓
+9. [weworkremote](https://weworkremote.com) ✓
 
 ## Remote work apps
 1. Upwork ✓
